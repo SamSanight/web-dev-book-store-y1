@@ -6,18 +6,19 @@ body{
     width: 100vw;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    overflow-y: overlay;
 }
 
 header{
     position: relative;
-    border: 1px solid black;
 }
 
 @media only screen and (min-width: 1024px) { /* desktop */
 
     header{
         width: 100%;
-        height: 15%;
+        height: 17.5%;
     }
     #headerBookImg{
         padding: 0;
@@ -31,12 +32,9 @@ header{
     #navHome, 
     #navContactUs,
     #navAbout{
-        text-align: center;
-        padding: 10px;
-        border: 2px solid black;
-        position: absolute;
         left: 50%;
-        transform: translatex(-50%);
+        top: 70%;
+        transform: translate(-50%,-30%);
     }
     #navHome{
         left: 30%;
@@ -68,6 +66,34 @@ header{
         text-decoration: none;
     }
 
+    #mainContent{
+        position: relative;
+        height: 100%;
+        overflow-x: hidden;
+    }
+    
+    #leftView{
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 50vw;
+        height: 99.9%;
+        order: 1;
+        border: 1px solid red;
+        box-sizing: border-box;
+    }
+    
+    #rightView{
+        top: 0;
+        right: 0;
+        position: absolute;
+        width: 50vw;
+        height: 99.9%;
+        order: 2;
+        border: 1px solid black;
+        box-sizing: border-box;
+    }
+
 }
 
 @media only screen and (max-width: 1023px) { /* tablets */
@@ -80,8 +106,8 @@ header{
         position: absolute;
         width: 15%;
         top: 50%;
-        left: 30%;
-        transform: translate(-70%,-50%);
+        left: 20%;
+        transform: translate(-80%,-50%);
         height: auto;
     }
     .navBarheader{
@@ -92,12 +118,10 @@ header{
     #navHome, 
     #navContactUs,
     #navAbout{
-        text-align: center;
-        padding: 10px;
-        border: 2px solid black;
-        position: absolute;
+        top: 100%;
         left: 50%;
-        transform: translatex(-50%);
+        padding: 10px;
+        transform: translate(-50%,+70%);
     }
     #navHome{
         top: 30%;
@@ -107,6 +131,38 @@ header{
     }
     #navAbout{
         top: 70%
+    }
+
+    #mainContent{
+        position: relative;
+        height: 100vh;
+        overflow-x: hidden;
+    }
+    
+    #leftView{
+        top: 0;
+        left: 0;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100vh;
+        overflow-y: auto;
+        order: 1;
+        border: 1px solid red;
+        box-sizing: border-box;
+    }
+    
+    #rightView{
+        left: 0;
+        position: relative;
+        margin-top: 0.5px;
+        width: 100%;
+        height: 10%;
+        max-height: 100vh;
+        overflow-y: auto;
+        order: 2; 
+        border: 1px solid black;
+        box-sizing: border-box;
     }
 
 
@@ -124,7 +180,17 @@ header{
 }
 
 #headerTitle{
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translate(-50%,-20%);
     text-align: center;
+    text-decoration: underline;
+    font-size: 35px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
 }
 
 .navBarheader{
@@ -132,6 +198,22 @@ header{
     top: 0vh;
     width: 100%;
     height: 30%;
+}
+
+#navHome, 
+#navContactUs,
+#navAbout{
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+}
+
+#navHome :hover, 
+#navContactUs :hover,
+#navAbout :hover{
+    background-color: black;
+    color: white;
+    padding: 10px;
 }
 
 
