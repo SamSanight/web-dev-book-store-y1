@@ -1,0 +1,72 @@
+#body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+
+@media only screen and (min-width: 1024px) { /* desktop */
+    #headerBookImg{
+        width: 7.5%;
+        height: auto;
+    }
+
+
+}
+
+@media only screen and (max-width: 1023px) { /* tablets */
+    #headerBookImg{
+        width: 8.5%;
+        height: auto;
+    }
+
+
+}
+
+#header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: azure;
+    background: 1px solid black;
+    width: 100vw;
+    height: 200px;
+}
+
+#headerTitle{
+    text-align: center;
+}
+
+#headerBookImg{
+    position: absolute;
+    padding: 5%;
+}
+
+
+
+
+ul { /*Remove default bullet points and margin from unordered list in nav bar*/
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li a{ /*makes colour of the text black on links*/
+    text-decoration: none;
+    color: black;
+}
+
+ul li a:hover{ /*makes colour of the text black on links if hover*/
+    color: black;
+}
+
+ul li a:active{ /*makes colour of the text black on links if clicked*/
+    color: black;
+}
+
+
