@@ -39,7 +39,7 @@ header{
         transform: translatex(-50%);
     }
     #navHome{
-        top: 30%;
+        left: 30%;
         transform: translatex(-50%);
     }
     #navContactUs{
@@ -100,13 +100,13 @@ header{
         transform: translatex(-50%);
     }
     #navHome{
-
+        top: 30%;
     }
     #navContactUs{
-        top: 15%;
+        top: 50%;
     }
     #navAbout{
-        top: 20%
+        top: 70%
     }
 
 
