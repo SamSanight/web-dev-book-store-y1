@@ -1,53 +1,138 @@
-#body{
+body{
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    background-size: 100%;
     height: 100vh;
+    width: 100vw;
     margin: 0;
     padding: 0;
 }
 
+header{
+    position: relative;
+    border: 1px solid black;
+}
 
 @media only screen and (min-width: 1024px) { /* desktop */
+
+    header{
+        width: 100%;
+        height: 15%;
+    }
     #headerBookImg{
+        padding: 0;
+        position: absolute;
         width: 7.5%;
         height: auto;
+        top: 50%;
+        left: 10%;
+        transform: translate(-90%,-50%);
+    }
+    #navHome, 
+    #navContactUs,
+    #navAbout{
+        text-align: center;
+        padding: 10px;
+        border: 2px solid black;
+        position: absolute;
+        left: 50%;
+        transform: translatex(-50%);
+    }
+    #navHome{
+        top: 30%;
+        transform: translatex(-50%);
+    }
+    #navContactUs{
+        left: 50%;
+        transform: translatex(-50%);
+    }
+    #navAbout{
+        left: 70%;
+        transform: translatex(-70%);
+    }
+    .navBarheader{
+        text-align: center;
+    }
+    .navBarheader ul{
+        padding: 10px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+
+    }
+    .navBarheader li{
+        margin: 0 10px;
     }
 
+    .navBarheader a{
+        text-decoration: none;
+    }
 
 }
 
 @media only screen and (max-width: 1023px) { /* tablets */
+    header{
+        width: 100%;
+        height: 30%;
+    }
     #headerBookImg{
-        width: 8.5%;
+        padding: 0;
+        position: absolute;
+        width: 15%;
+        top: 50%;
+        left: 30%;
+        transform: translate(-70%,-50%);
         height: auto;
+    }
+    .navBarheader{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #navHome, 
+    #navContactUs,
+    #navAbout{
+        text-align: center;
+        padding: 10px;
+        border: 2px solid black;
+        position: absolute;
+        left: 50%;
+        transform: translatex(-50%);
+    }
+    #navHome{
+
+    }
+    #navContactUs{
+        top: 15%;
+    }
+    #navAbout{
+        top: 20%
     }
 
 
 }
 
-#header{
+#headerContainer{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
     background-color: azure;
-    background: 1px solid black;
+    background: 2px solid black;
     width: 100vw;
-    height: 200px;
+    height: 30px;
+    justify-content: space-between;
 }
 
 #headerTitle{
     text-align: center;
 }
 
-#headerBookImg{
-    position: absolute;
-    padding: 5%;
+.navBarheader{
+    border-left: 0px;
+    top: 0vh;
+    width: 100%;
+    height: 30%;
 }
-
-
 
 
 ul { /*Remove default bullet points and margin from unordered list in nav bar*/
@@ -59,6 +144,7 @@ ul { /*Remove default bullet points and margin from unordered list in nav bar*/
 ul li a{ /*makes colour of the text black on links*/
     text-decoration: none;
     color: black;
+    flex-grow: 1;
 }
 
 ul li a:hover{ /*makes colour of the text black on links if hover*/
