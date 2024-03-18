@@ -66,7 +66,19 @@ header{
         text-decoration: none;
     }
 
-    #mainContent{
+    #indexMainContent{
+        position: relative;
+        height: 100%;
+        overflow-x: hidden;
+    }
+
+    #payMainContent{
+        position: relative;
+        height: 100%;
+        overflow-x: hidden;
+    }
+
+    #successMainContent{
         position: relative;
         height: 100%;
         overflow-x: hidden;
@@ -133,7 +145,19 @@ header{
         top: 70%
     }
 
-    #mainContent{
+    #indexMainContent{
+        position: relative;
+        height: 100vh;
+        overflow-x: hidden;
+    }
+
+    #payMainContent{
+        position: relative;
+        height: 100vh;
+        overflow-x: hidden;
+    }
+
+    #successMainContent{
         position: relative;
         height: 100vh;
         overflow-x: hidden;
@@ -215,6 +239,19 @@ header{
     color: white;
     padding: 10px;
 }
+
+#paymentTitle{
+    margin-left: 2%;
+}
+
+#paymentTypeTitle{
+    margin-left: 30%;
+}
+
+#paymentSuccessTitle{
+    margin-left: 2%;
+}
+
 
 
 ul { /*Remove default bullet points and margin from unordered list in nav bar*/
