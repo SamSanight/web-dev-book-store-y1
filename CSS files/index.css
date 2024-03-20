@@ -67,6 +67,7 @@ header{
     }
 
     #indexMainContent{
+        display: flex;
         position: relative;
         height: 100%;
         overflow-x: hidden;
@@ -85,27 +86,97 @@ header{
     }
     
     #leftView{
+        flex: 1;
+        margin-left: 1%;
         top: 0;
         left: 0;
         position: absolute;
         width: 50vw;
-        height: 99.9%;
+        height: auto;
         order: 1;
-        border: 1px solid red;
         box-sizing: border-box;
     }
     
     #rightView{
+        flex: 1;
+        margin-left: 1%;
         top: 0;
         right: 0;
         position: absolute;
         width: 50vw;
-        height: 99.9%;
+        height: auto;
         order: 2;
-        border: 1px solid black;
         box-sizing: border-box;
     }
 
+    #book1CoverImg,
+    #book2CoverImg,
+    #book3CoverImg,
+    #book4CoverImg{
+        width: 11vw;
+        height: 35vh;
+        margin-right: 2%;
+    }
+
+    #book1Container,
+    #book2Container,
+    #book3Container,
+    #book4Container{
+        border: 1px solid blue;    
+        width: 85%;
+        height: auto;
+        padding: 2%;
+        position: relative
+    }
+
+    #book1Container h2,
+    #book2Container h2,
+    #book3Container h2,
+    #book4Container h2,
+    #book1Container h5,
+    #book2Container h5,
+    #book3Container h5,
+    #book4Container h5,
+    #book1Container p,
+    #book2Container p,
+    #book3Container p,
+    #book4Container p {
+        position: absolute;
+        margin-left: 3%;
+        left: 25%;
+        top: 0;
+        word-wrap: break-word;
+    }
+
+    #book1Container h2,
+    #book2Container h2,
+    #book3Container h2,
+    #book4Container h2 {
+        top: 5%;
+    }
+
+    #book1Container h5,
+    #book2Container h5,
+    #book3Container h5,
+    #book4Container h5 {
+        top: 15%;
+    }
+
+    #book1Container p,
+    #book2Container p,
+    #book3Container p,
+    #book4Container p {
+        top: 25%;
+    }
+
+    .paymentBtn{
+        position: absolute;
+        margin-top: auto;
+        align-self: flex-start;
+        left: 50%;
+        bottom: 15%;
+        transform: translateY(85%);
+    }
 }
 
 @media only screen and (max-width: 1023px) { /* tablets */
@@ -146,9 +217,12 @@ header{
     }
 
     #indexMainContent{
+        display: flex;
         position: relative;
+        flex-direction: column;
         height: 100vh;
         overflow-x: hidden;
+        align-items: center;
     }
 
     #payMainContent{
@@ -164,30 +238,89 @@ header{
     }
     
     #leftView{
+        flex: 1;
         top: 0;
         left: 0;
         position: relative;
         width: 100%;
-        height: 100%;
-        max-height: 100vh;
-        overflow-y: auto;
+        height: fit-content;
+        
         order: 1;
         border: 1px solid red;
         box-sizing: border-box;
     }
     
     #rightView{
+        flex: 1;
         left: 0;
         position: relative;
         margin-top: 0.5px;
         width: 100%;
-        height: 10%;
-        max-height: 100vh;
-        overflow-y: auto;
+        height: fit-content;
         order: 2; 
         border: 1px solid black;
         box-sizing: border-box;
     }
+
+    #book1CoverImg,
+    #book2CoverImg,
+    #book3CoverImg,
+    #book4CoverImg{
+        width: 50%;
+        height: auto;
+        margin-right: 2%;
+    }
+
+    #book1Container,
+    #book2Container,
+    #book3Container,
+    #book4Container{   
+        width: 95%;
+        height: auto;
+        padding: 2%;
+        position: relative
+    }
+
+    #book1Container h2,
+    #book2Container h2,
+    #book3Container h2,
+    #book4Container h2,
+    #book1Container h5,
+    #book2Container h5,
+    #book3Container h5,
+    #book4Container h5,
+    #book1Container p,
+    #book2Container p,
+    #book3Container p,
+    #book4Container p {
+        position: absolute;
+        margin-left: 3%;
+        left: 50%;
+        top: 0;
+        word-wrap: break-word;
+    }
+
+    #book1Container h2,
+    #book2Container h2,
+    #book3Container h2,
+    #book4Container h2 {
+        top: 5%;
+    }
+
+    #book1Container h5,
+    #book2Container h5,
+    #book3Container h5,
+    #book4Container h5 {
+        top: 15%;
+    }
+
+    #book1Container p,
+    #book2Container p,
+    #book3Container p,
+    #book4Container p {
+        top: 25%;
+    }
+    
 
 
 }
@@ -250,6 +383,17 @@ header{
 
 #paymentSuccessTitle{
     margin-left: 2%;
+}
+
+.paymentBtn{
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: lightgrey;
+    text-decoration: none;
+    color: black;
 }
 
 
