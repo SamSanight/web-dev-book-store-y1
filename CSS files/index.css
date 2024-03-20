@@ -353,6 +353,13 @@ header{
         font-size: 13px;
     }
 
+    #paymentTypeTitle{
+        font-size: 15px;
+    }
+    #additionalText{
+        font-size: 10px;
+    }
+
 }
 
 #headerContainer{
@@ -410,11 +417,16 @@ header{
 #paymentTypeTitle{
     position: absolute;
     margin-left: 30%;
+    width: 100vw;
 }
+#additionalText{
+    margin-left: 10%;
+}
+
 #paymentImg{
     position: absolute;
     transform: translate(-0%,-15%); 
-    width: 100%;
+    width: 10%;
 }
 
 #paymentFormInputContainer{
