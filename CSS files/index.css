@@ -113,7 +113,7 @@ header{
     #book2CoverImg,
     #book3CoverImg,
     #book4CoverImg{
-        width: 11vw;
+        width: 25%;
         height: 35vh;
         margin-right: 2%;
     }
@@ -121,8 +121,7 @@ header{
     #book1Container,
     #book2Container,
     #book3Container,
-    #book4Container{
-        border: 1px solid blue;    
+    #book4Container{   
         width: 85%;
         height: auto;
         padding: 2%;
@@ -173,7 +172,7 @@ header{
         position: absolute;
         margin-top: auto;
         align-self: flex-start;
-        left: 50%;
+        left: 60%;
         bottom: 15%;
         transform: translateY(85%);
     }
@@ -246,7 +245,6 @@ header{
         height: fit-content;
         
         order: 1;
-        border: 1px solid red;
         box-sizing: border-box;
     }
     
@@ -258,7 +256,6 @@ header{
         width: 100%;
         height: fit-content;
         order: 2; 
-        border: 1px solid black;
         box-sizing: border-box;
     }
 
@@ -320,8 +317,15 @@ header{
     #book4Container p {
         top: 25%;
     }
-    
 
+    .paymentBtn{
+        position: absolute;
+        margin-top: auto;
+        align-self: flex-start;
+        left: 70%;
+        bottom: 15%;
+        transform: translateY(85%);
+    }
 
 }
 
