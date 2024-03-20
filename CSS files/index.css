@@ -382,12 +382,29 @@ header{
 }
 
 #paymentTypeTitle{
+    position: absolute;
     margin-left: 30%;
+}
+#paymentImg{
+    position: absolute;
+    transform: translate(-0%,-15%); 
+    width: 100%;
+}
+
+#paymentFormInputContainer{
+    display: flex;
+    position: absolute;
+    border: 1px solid black;
+    background-color: lightgray;
+    border-radius: 15px;
+    width: 60%;
+    height: 50%;
 }
 
 #paymentSuccessTitle{
     margin-left: 2%;
 }
+
 
 .paymentBtn{
     border: 1px solid black;
