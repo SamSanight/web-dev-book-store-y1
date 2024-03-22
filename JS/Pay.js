@@ -70,14 +70,39 @@ window.onload = () =>{
                 errorMsg += "!";
                 alert(errorMsg);
                 return;
+            } else{
+                let data ={
+                    "master_card": cardNumber,
+                    "exp_year": year,
+                    "exp_month": month,
+                    "cvv_code": CVV
+                }
+                let jsonData = JSON.stringify(data);
+                let url = "https://mudfoot.doc.stu.mmu.ac.uk/node/api/creditcard";
+
+                fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: jsonData
+                })
+                .then(response => response.json())
+                .then(data => {
+                console.log('Success:', data);
+                })
+                .catch((error) => {
+                console.error('Error:', error);
+                });
             }
             window.location.href = "success.html";
         })
     }
-
-    const lastFourDigits = sessionStorage.getItem('lastFourDigits');
-    if (lastFourDigits) {
-        document.getElementById("additionalText").innerHTML = "Your credit/debit card number ends in **** **** **** " + lastFourDigits;
-        sessionStorage.removeItem('lastFourDigits'); // Clear the stored value from sessionStorage
+    if (window.location.href.includes("success.html")) {
+        const lastFourDigits = sessionStorage.getItem('lastFourDigits');
+        if (lastFourDigits) {
+            document.getElementById("additionalText").innerHTML = "Your credit/debit card number ends in **** **** **** " + lastFourDigits;
+            sessionStorage.removeItem('lastFourDigits'); // Clear the stored value from sessionStorage
+        }
     }
 }
