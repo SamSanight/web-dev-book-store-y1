@@ -4,10 +4,10 @@ window.onload = () =>{
         if(cardNumber === null || cardNumber === "" || typeof cardNumber != "string"){
             isValid = false;
         }
-        /*let re = /^[a-zA-Z0-9_\-]+@[a-zA-Z_\-]+\.[a-zA-Z]{0,64}$/;
-        if(re.test(Email) === false){
+        let re = /^(5[1-5][0-9]{14})$/;
+        if(re.test(cardNumber) === false){
             isValid = false;
-        }*/
+        }
         return isValid;
     }
     const ValidateMonth = (Month) =>{
@@ -26,13 +26,13 @@ window.onload = () =>{
     }
     const ValidateCVV = (code) =>{
         let isValid = true;
-        if(code === null || code === "" || typeof code != "string" || (code.length != 3 && code.length != 4)){
+        if(code === null || code === "" || typeof code != "string"){
             isValid = false;
-        }/*
-        let re = /^[a-zA-Z0-9_\-]+@[a-zA-Z_\-]+\.[a-zA-Z]{0,64}$/;
-        if(re.test(Email) === false){
+        }
+        let re = /^[0-9]{3,4}$/;
+        if(re.test(code) === false){
             isValid = false;
-        }*/
+        }
         return isValid;
     }
     const paymentForm = document.getElementById("PaymentForm");
@@ -69,8 +69,9 @@ window.onload = () =>{
                 errorMsg = errorMsg.substr(0, errorMsg.length - 2);
                 errorMsg += "!";
                 alert(errorMsg);
+                return;
             }
-            //window.location.href = "success.html";
+            window.location.href = "success.html";
         })
     }
 
