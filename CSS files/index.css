@@ -435,12 +435,13 @@ header{
     border: 1px solid black;
     background-color: lightgray;
     border-radius: 15px;
+    padding: 1%;
     width: 50%;
     height: 30%;
     align-items: center;
     left: 50%;
-    top: 40%;
-    transform: translate(-50%,-60%);
+    top: 42.5%;
+    transform: translate(-50%,-57.5%);
 }
 
 #paymentSuccessTitle{
