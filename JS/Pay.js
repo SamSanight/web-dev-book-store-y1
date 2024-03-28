@@ -1,4 +1,66 @@
 window.onload = () =>{ // make sure the page is loaded before executing js to prevent errors with getelementbyIDs
+    document.getElementById("fontSizeInc1").addEventListener("click", () =>{ // changes the font sizes if buttons are clicked
+        document.body.style.fontSize = "16px";
+        document.querySelectorAll('label').forEach(label => label.style.fontSize = '20px'); // changes the font size of labels which changes the buttons mainly
+        if(window.location.href.includes("success.html")){ // if on the success page then 
+            document.getElementById("additionalText").style.fontSize = "10px";
+        }
+        if(window.location.href.includes("pay.html")){ // if on the pay page then
+            document.getElementById("submit").style.padding = "1px";
+            document.getElementById("submit").style.fontSize = "16px";
+        }
+    })
+    document.getElementById("fontSizeInc2").addEventListener("click", () =>{
+        document.body.style.fontSize = "20px";
+        document.querySelectorAll('label').forEach(label => label.style.fontSize = '22.5px');
+        if(window.location.href.includes("success.html")){
+            document.getElementById("additionalText").style.fontSize = "16px";
+        }
+        if(window.location.href.includes("pay.html")){
+            document.getElementById("submit").style.padding = "2.5px";
+            document.getElementById("submit").style.fontSize = "20px";
+        }
+    })
+    document.getElementById("fontSizeInc3").addEventListener("click", () =>{
+        document.body.style.fontSize = "25px";
+        document.querySelectorAll('label').forEach(label => label.style.fontSize = '25px');
+        if(window.location.href.includes("success.html")){
+            document.getElementById("additionalText").style.fontSize = "16px";
+        }
+        if(window.location.href.includes("pay.html")){
+            document.getElementById("submit").style.padding = "5px";
+            document.getElementById("submit").style.fontSize = "25px";
+        }
+    })
+
+    document.getElementById("backgroundColour1").addEventListener("click", () =>{ // changes the background colours if buttons are clicked
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+        if(window.location.href.includes("pay.html")){
+            document.getElementById("paymentFormInputContainer").style.backgroundColor = "lightgrey";
+        }
+    })
+    document.getElementById("backgroundColour2").addEventListener("click", () =>{
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "white";
+        if(window.location.href.includes("pay.html")){
+            document.getElementById("paymentFormInputContainer").style.backgroundColor = "hsl(0,0%,16%)";
+        }
+    })
+    document.getElementById("backgroundColour3").addEventListener("click", () =>{
+        document.body.style.backgroundColor = "lightyellow";
+        document.body.style.color = "darkblue";
+        if(window.location.href.includes("pay.html")){
+            document.getElementById("paymentFormInputContainer").style.backgroundColor = "lightyellow";
+        }
+    })
+    document.getElementById("backgroundColour4").addEventListener("click", () =>{
+        document.body.style.backgroundColor = "blue";
+        document.body.style.color = "orange";
+        if(window.location.href.includes("pay.html")){
+            document.getElementById("paymentFormInputContainer").style.backgroundColor = "blue";
+        }
+    })
     const ValidateCardNumber = (cardNumber) =>{ // for validating if card number is correct
         let isValid = true; // the main boolean value for my validation
         if(cardNumber === null || cardNumber === "" || typeof cardNumber != "string"){ // used throughout to check if value to validate is null,empty or not a string
