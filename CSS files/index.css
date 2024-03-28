@@ -399,9 +399,10 @@ header{
     left: 50%;
     transform: translate(-50%,-20%);
     text-align: center;
-    text-decoration: underline;
     font-size: 35px;
     padding: 20px;
+    padding-left: 20%;
+    padding-right: 20%;
     border-radius: 15px;
 }
 
