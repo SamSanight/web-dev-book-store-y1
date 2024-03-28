@@ -1,17 +1,17 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!--defines the file type-->
 <html lang="en">
     <head>
         <title>Bookstore Payment Successful</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="./CSS files/index.css">
+        <link rel="stylesheet" href="./CSS files/index.css"> <!--links the CSS file to the html-->
     </head>
     <body>
-        <header>
+        <header> <!--Header for my page including the nav bar-->
             <div class="headerContainer">
                 <img id="headerBookImg" src="./Images/book.png">
                 <h1 id="headerTitle">Sam's BookShop</h1>
                 <nav class="navBarHeader"> <!--Nav bar for header-->
-                    <ul> <!-- unordered list --> 
+                    <ul> <!-- unordered list of nav bar items--> 
                         <li id="navHome"><a href="index.html">Home</a></li>
                         <li id="navContactUs"><a href="contactUs.html">About Us</a></li>
                         <li id="navAbout"><a href="about.html">Contact Us</a></li>
@@ -20,16 +20,12 @@
             </div>
         </header>
         <div id="successMainContent">
-            <h1 id="paymentSuccessTitle">You have successfully entered your Debit/Credit details</h1>
+            <h1 id="paymentSuccessTitle">You have successfully entered your Debit/Credit card details</h1>
             <hr>
             <div id="paymentFormContainer">
                 <h2 id="paymentTypeTitle">Debit / Credit Card<span><img id="paymentImg" src="./Images/paymentImg.png"></span><span id="additionalText">Your credit/debit card number ends in **** **** **** 1234</span></h2>
-                <script src="./JS/Pay.js"></script>
+                <script src="./JS/Pay.js"></script> <!--links to the js for the altering of the paymentTypeTitle numbers-->
             </div>
         </div>
-
-        <footer>
-
-        </footer>
     </body>
 </html>

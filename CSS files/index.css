@@ -1,4 +1,4 @@
-body{
+body{ /*Makes the body of the html pages use flexbox, pre defines the parameters and makes overflows x hidden and y overlay so scrolling can occur on the body only*/
     display: flex;
     flex-direction: column;
     background-size: 100%;
@@ -14,11 +14,14 @@ header{
     position: relative;
 }
 
-@media only screen and (min-width: 1024px) { /* desktop */
-
+@media only screen and (min-width: 1024px) { /* desktop View */
     header{
         width: 100%;
         height: 17.5%;
+    }
+    #headerTitle{
+        background-color: black;
+        color: white;
     }
     #headerBookImg{
         padding: 0;
@@ -188,12 +191,22 @@ header{
         top: 10%;
         left: 10%;
     }
+    #paymentImg{
+        width: 10%;
+    }
 }
 
-@media only screen and (max-width: 1023px) { /* tablets */
+@media only screen and (max-width: 1023px) { /* tablet View*/
+
     header{
         width: 100%;
         height: 30%;
+        background-color: darkgrey;
+        border: 1px solid black;
+    }
+    #headerTitle{
+        border: 2px solid black;
+        color: black;
     }
     #headerBookImg{
         padding: 0;
@@ -212,10 +225,14 @@ header{
     #navHome, 
     #navContactUs,
     #navAbout{
+        background-color: darkgrey;
         top: 100%;
         left: 50%;
         padding: 10px;
+        border-radius: 5px;
         transform: translate(-50%,+70%);
+        font-weight: 520;
+        font-size: 17px;
     }
     #navHome{
         top: 30%;
@@ -345,7 +362,7 @@ header{
     label,
     #submit{
         position: relative;
-        font-size: 15px;
+        font-size: 16px;
         top: 10%;
         left: 10%;
     }
@@ -354,10 +371,13 @@ header{
     }
 
     #paymentTypeTitle{
-        font-size: 15px;
+        font-size: 20px;
     }
     #additionalText{
         font-size: 10px;
+    }
+    #paymentImg{
+        width: 15%;
     }
 
 }
@@ -381,8 +401,6 @@ header{
     text-align: center;
     text-decoration: underline;
     font-size: 35px;
-    background-color: black;
-    color: white;
     padding: 20px;
     border-radius: 15px;
 }
@@ -398,7 +416,6 @@ header{
 #navContactUs,
 #navAbout{
     text-align: center;
-    padding: 10px;
     position: absolute;
 }
 
@@ -408,6 +425,7 @@ header{
     background-color: black;
     color: white;
     padding: 10px;
+    border-radius: 5px;
 }
 
 #paymentTitle{
@@ -426,7 +444,6 @@ header{
 #paymentImg{
     position: absolute;
     transform: translate(-0%,-15%); 
-    width: 10%;
 }
 
 #paymentFormInputContainer{
@@ -471,7 +488,6 @@ ul { /*Remove default bullet points and margin from unordered list in nav bar*/
     padding: 0;
     margin: 0;
 }
-
 ul li a{ /*makes colour of the text black on links*/
     text-decoration: none;
     color: black;
@@ -485,5 +501,6 @@ ul li a:hover{ /*makes colour of the text black on links if hover*/
 ul li a:active{ /*makes colour of the text black on links if clicked*/
     color: black;
 }
+
 
 
