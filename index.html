@@ -8,13 +8,33 @@
     <body>
         <header> <!--Header for my page including the nav bar-->
             <div class="headerContainer">
-                <img id="headerBookImg" src="./Images/book.png"> 
+                <img id="headerBookImg" src="./Images/book.png" alt="Book Image"> 
                 <h1 id="headerTitle">Sam's BookShop</h1>
+                <div id="accessabilitySelectContainer">
+                    <div id="accessabilitySize">
+                        <label id="textSizeChange">Text size</label>
+                        <ul id="sizeList">
+                            <button id="fontSizeInc1" title="text size increase 1">A</button>
+                            <button id="fontSizeInc2" title="text size increase 2">A</button>
+                            <button id="fontSizeInc3" title="text size increase 3">A</button>
+                        </ul>
+                    </div>
+                    <div id="accessabilityColour">
+                        <label id="textColorChange">Colour</label>
+                        <ul id="colourList">
+                            <button id="fontColour1" title="text colour 1">C</button>
+                            <button id="fontColour2" title="text colour 2">C</button>
+                            <button id="fontColour3" title="text colour 3">C</button>
+                            <button id="fontColour4" title="text colour 4">C</button>
+                        </ul>
+                    </div>
+                </div>
+                
                 <nav class="navBarHeader"> <!--Nav bar for header-->
                     <ul> <!-- unordered list of nav bar items--> 
-                        <li id="navHome"><a href="index.html">Home</a></li>
-                        <li id="navContactUs"><a href="contactUs.html">About Us</a></li>
-                        <li id="navAbout"><a href="about.html">Contact Us</a></li>
+                        <li id="navHome"><a href="index.html" title="Home Page Link">Home</a></li>
+                        <li id="navAbout"><a href="#" title="About Us Page Link">About Us</a></li>
+                        <li id="navContactUs"><a href="#" title="Contact Us Page Link">Contact Us</a></li>
                     </ul>
                 </nav>
             </div>
@@ -22,7 +42,7 @@
         <div id="indexMainContent">
             <div id="leftView"> <!--left view of the page--> <!-- EACH AS FOLLOWS-->
                 <div id="book1Container">
-                    <img id="book1CoverImg" src="./Images/WarOfWorlds.jpg" alt="WarOfTheWorldsImg"> <!--image of the book cover-->
+                    <img id="book1CoverImg" src="./Images/WarOfWorlds.jpg" alt="War Of TheWorlds Img"> <!--image of the book cover-->
                     <h2>War Of The Worlds</h2><br/>
                     <h5>by H. G. Wells</h5>
                     <p>
@@ -36,7 +56,7 @@
                     <a class="paymentBtn" id="paymentBtn1" href="./pay.html">Purchase</a> <!--a payment button for that book with its own id and linking to a class-->
                 </div>
                 <div id="book2Container">
-                    <img id="book2CoverImg" src="./Images/HarryPotter.jpg" alt="HarryPotterImg">
+                    <img id="book2CoverImg" src="./Images/HarryPotter.jpg" alt="Harry Potter Img">
                     <h2>Harry Potter and the Philosopher's Stone</h2>
                     <h5>by JK Rowling</h5>
                     <p>
@@ -54,7 +74,7 @@
             </div>
             <div id="rightView"> <!--Right view of the page-->
                 <div id="book3Container">
-                    <img id="book3CoverImg" src="./Images/TheShining.jpg" alt="TheShiningImg">
+                    <img id="book3CoverImg" src="./Images/TheShining.jpg" alt="The Shining Img">
                     <h2>The Shinning</h2>
                     <h5>Stephen King</h5>
                     <p>
@@ -69,7 +89,7 @@
                     <a class="paymentBtn" id="paymentBtn3" href="./pay.html">Purchase</a>
                 </div>
                 <div id="book4Container">
-                    <img id="book4CoverImg" src="./Images/Dune cover.jpg" alt="DuneImg">
+                    <img id="book4CoverImg" src="./Images/Dune cover.jpg" alt="Dune Img">
                     <h2>Dune</h2>
                     <h5>by Frank Herbert</h5>
                     <p>

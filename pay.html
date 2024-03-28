@@ -9,13 +9,32 @@
     <body>
         <header> <!--Header for my page including the nav bar-->
             <div class="headerContainer">
-                <img id="headerBookImg" src="./Images/book.png">
+                <img id="headerBookImg" src="./Images/book.png" alt="Book Image"> 
                 <h1 id="headerTitle">Sam's BookShop</h1>
+                <div id="accessabilitySelectContainer">
+                    <div id="accessabilitySize">
+                        <label id="textSizeChange">Text size</label>
+                        <ul id="sizeList">
+                            <button id="fontSizeInc1" title="text size increase 1">A</button>
+                            <button id="fontSizeInc2" title="text size increase 2">A</button>
+                            <button id="fontSizeInc3" title="text size increase 3">A</button>
+                        </ul>
+                    </div>
+                    <div id="accessabilityColour">
+                        <label id="textColorChange">Colour</label>
+                        <ul id="colourList">
+                            <button id="fontColour1" title="text colour 1">C</button>
+                            <button id="fontColour2" title="text colour 2">C</button>
+                            <button id="fontColour3" title="text colour 3">C</button>
+                            <button id="fontColour4" title="text colour 4">C</button>
+                        </ul>
+                    </div>
+                </div>
                 <nav class="navBarHeader"> <!--Nav bar for header-->
                     <ul> <!-- unordered list --> 
-                        <li id="navHome"><a href="index.html">Home</a></li>
-                        <li id="navContactUs"><a href="contactUs.html">About Us</a></li>
-                        <li id="navAbout"><a href="about.html">Contact Us</a></li>
+                        <li id="navHome"><a href="index.html" title="Home Page Link">Home</a></li>
+                        <li id="navAbout"><a href="#" title="About Us Page Link">About Us</a></li>
+                        <li id="navContactUs"><a href="#" title="Contact Us Page Link">Contact Us</a></li>
                     </ul>
                 </nav>
             </div>
