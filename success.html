@@ -3,8 +3,8 @@
     <head>
         <title>Bookstore Payment Successful</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="./CSS files/index.css"> <!--links the CSS file to the html-->
-        <script src="./JS/Pay.js"></script>
+        <link rel="stylesheet" href="./CSS_files/Bookstore.css"> <!--links the CSS file to the html-->
+        <script src="./JS/BookstoreScipts.js"></script>
     </head>
     <body>
         <header> <!--Header for my page including the nav bar-->
@@ -14,20 +14,20 @@
                 <div id="accessabilitySelectContainer">
                     <div id="accessabilitySize">
                         <label id="textSizeChange">Text size</label>
-                        <ul id="sizeList">
+                        <div id="sizeList">
                             <button id="fontSizeInc1" title="text size increase 1">A</button>
                             <button id="fontSizeInc2" title="text size increase 2">A</button>
                             <button id="fontSizeInc3" title="text size increase 3">A</button>
-                        </ul>
+                        </div>
                     </div>
                     <div id="accessabilityColour">
                         <label id="textColorChange">Colour</label>
-                        <ul id="colourList">
+                        <div id="colourList">
                             <button id="backgroundColour1" title="background colour 1">C</button>
                             <button id="backgroundColour2" title="background colour 2">C</button>
                             <button id="backgroundColour3" title="background colour 3">C</button>
                             <button id="backgroundColour4" title="background colour 4">C</button>
-                        </ul>
+                        </div>
                     </div>
                 </div>
                 <nav class="navBarHeader"> <!--Nav bar for header-->
@@ -43,8 +43,7 @@
             <h1 id="paymentSuccessTitle">You have successfully entered your Debit/Credit card details</h1>
             <hr>
             <div id="paymentFormContainer">
-                <h2 id="paymentTypeTitle">Debit / Credit Card<span><img id="paymentImg" src="./Images/paymentImg.png"></span><span id="additionalText">Your credit/debit card number ends in **** **** **** 1234</span></h2>
-                <script src="./JS/Pay.js"></script> <!--links to the js for the altering of the paymentTypeTitle numbers-->
+                <h2 id="paymentTypeTitle">Debit / Credit Card<span><img id="paymentImg" src="./Images/paymentImg.png" alt="credit/debit card image"></span><span id="additionalText">Your credit/debit card number ends in **** **** **** 1234</span></h2>
             </div>
         </div>
     </body>

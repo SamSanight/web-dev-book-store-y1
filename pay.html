@@ -3,8 +3,8 @@
     <head>
         <title>Bookstore Payment</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="./CSS files/index.css"> <!--links the CSS file to the html-->
-        <script src="./JS/Pay.js"></script>
+        <link rel="stylesheet" href="./CSS_files/Bookstore.css"> <!--links the CSS file to the html-->
+        <script src="./JS/BookstoreScipts.js"></script>
     </head>
     <body>
         <header> <!--Header for my page including the nav bar-->
@@ -14,20 +14,20 @@
                 <div id="accessabilitySelectContainer">
                     <div id="accessabilitySize">
                         <label id="textSizeChange">Text size</label>
-                        <ul id="sizeList">
+                        <div id="sizeList">
                             <button id="fontSizeInc1" title="text size increase 1">A</button>
                             <button id="fontSizeInc2" title="text size increase 2">A</button>
                             <button id="fontSizeInc3" title="text size increase 3">A</button>
-                        </ul>
+                        </div>
                     </div>
                     <div id="accessabilityColour">
                         <label id="textColorChange">Colour</label>
-                        <ul id="colourList">
+                        <div id="colourList">
                             <button id="backgroundColour1" title="background colour 1">C</button>
                             <button id="backgroundColour2" title="background colour 2">C</button>
                             <button id="backgroundColour3" title="background colour 3">C</button>
                             <button id="backgroundColour4" title="background colour 4">C</button>
-                        </ul>
+                        </div>
                     </div>
                 </div>
                 <nav class="navBarHeader"> <!--Nav bar for header-->
@@ -43,13 +43,13 @@
             <h1 id="paymentTitle">Payment Options</h1>
             <hr>
             <div id="paymentFormContainer">
-                <h2 id="paymentTypeTitle">Debit / Credit Card<span><img id="paymentImg" src="./Images/paymentImg.png"></span></h2> 
+                <h2 id="paymentTypeTitle">Debit / Credit Card<span><img id="paymentImg" src="./Images/paymentImg.png" alt="credit/debit card image"></span></h2> 
                 <div id="paymentFormInputContainer">
                     <form id="PaymentForm"> <!--Payment Form-->
                         <label>Card Number</label>
-                        <input type="text" id="cardNumberInput" placeholder="Enter Card Number"><br><br> <!--Input for cardNumber-->
+                        <input type="text" id="cardNumberInput" placeholder="Enter Card Number" title="Card Number Input Box"><br><br> <!--Input for cardNumber-->
                         <label for="month">Expiration Date</label>
-                        <select id="month"> <!--Input for Expiry Month-->
+                        <select id="month" title="Month Drop Down Menu"> <!--Input for Expiry Month-->
                             <option value="" disabled selected>Month</option> <!--placeholder text for the menu-->
                             <option value="1">January</option>
                             <option value="2">February</option>
@@ -64,7 +64,7 @@
                             <option value="11">November</option>
                             <option value="12">December</option>
                         </select>
-                        <select id="year"> <!--Input for Expiry Year-->
+                        <select id="year" title="Year Drop Down Menu"> <!--Input for Expiry Year-->
                             <option value="" disabled selected>Year</option> <!--placeholder text for the menu-->
                             <option value="24">2024</option>
                             <option value="25">2025</option>
@@ -81,9 +81,9 @@
                             <option value="36">2036</option>
                         </select><br><br>
                         <label>Security Code</label>
-                        <input type="text" id="CVVInput"><br><br> <!--Input for security Code-->
+                        <input type="text" id="CVVInput" title="3/4 Digit Security Code Input"><br><br> <!--Input for security Code-->
                         <label>(This is the 3-4 digit code on the back of your card)</label><br><br>
-                        <button type="submit" id="submit">Submit Details</button> <!--Submit button for the form-->
+                        <button type="submit" id="submit" title="Submit your Card Details for Payment"><strong>Submit Details</strong></button> <!--Submit button for the form-->
                     </form>
                 </div>
             </div>

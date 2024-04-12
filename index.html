@@ -3,8 +3,8 @@
     <head>
         <title>Bookstore Home</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="./CSS files/index.css"> <!--links the CSS file to the html-->
-        <script src="./JS/Pay.js"></script>
+        <link rel="stylesheet" href="./CSS_files/Bookstore.css"> <!--links the CSS file to the html-->
+        <script src="./JS/BookstoreScipts.js"></script>
     </head>
     <body>
         <header> <!--Header for my page including the nav bar-->
@@ -14,20 +14,20 @@
                 <div id="accessabilitySelectContainer">
                     <div id="accessabilitySize">
                         <label id="textSizeChange">Text size</label>
-                        <ul id="sizeList">
+                        <div id="sizeList">
                             <button id="fontSizeInc1" title="text size increase 1">A</button>
                             <button id="fontSizeInc2" title="text size increase 2">A</button>
                             <button id="fontSizeInc3" title="text size increase 3">A</button>
-                        </ul>
+                        </div>
                     </div>
                     <div id="accessabilityColour">
                         <label id="textColorChange">Colour</label>
-                        <ul id="colourList">
+                        <div id="colourList">
                             <button id="backgroundColour1" title="background colour 1">C</button>
                             <button id="backgroundColour2" title="background colour 2">C</button>
                             <button id="backgroundColour3" title="background colour 3">C</button>
                             <button id="backgroundColour4" title="background colour 4">C</button>
-                        </ul>
+                        </div>
                     </div>
                 </div>
                 
@@ -43,7 +43,7 @@
         <div id="indexMainContent">
             <div id="leftView"> <!--left view of the page--> <!-- EACH AS FOLLOWS-->
                 <div id="book1Container">
-                    <img id="book1CoverImg" src="./Images/WarOfWorlds.jpg" alt="War Of TheWorlds Img"> <!--image of the book cover-->
+                    <img id="book1CoverImg" src="./Images/WarOfWorlds.jpg" alt="War Of The Worlds Image"> <!--image of the book cover-->
                     <h2>War Of The Worlds</h2>
                     <h5>by H. G. Wells</h5>
                     <p>
@@ -54,10 +54,10 @@
                         in their path on a merciless march towards the capital. Can humanity 
                         survive this Martian onslaught?
                     </p> <!--All the various texts-->
-                    <a class="paymentBtn" id="paymentBtn1" href="./pay.html">Purchase</a> <!--a payment button for that book with its own id and linking to a class-->
+                    <a class="paymentBtn" id="paymentBtn1" href="./pay.html" title="purchase War Of The Worlds book"><strong>Purchase</strong></a> <!--a payment button for that book with its own id and linking to a class-->
                 </div>
                 <div id="book2Container">
-                    <img id="book2CoverImg" src="./Images/HarryPotter.jpg" alt="Harry Potter Img">
+                    <img id="book2CoverImg" src="./Images/HarryPotter.jpg" alt="Harry Potter Image">
                     <h2>Harry Potter and the Philosopher's Stone</h2>
                     <h5>by JK Rowling</h5>
                     <p>
@@ -70,12 +70,12 @@
                         finds that his school has its own dark secrets – and an adventure that will 
                         become the stuff of legend begins.
                     </p>
-                    <a class="paymentBtn" id="paymentBtn2" href="./pay.html">Purchase</a>
+                    <a class="paymentBtn" id="paymentBtn2" href="./pay.html" title="purchase Harry Potter and the Philosopher Stone book"><strong>Purchase</strong></a>
                 </div>
             </div>
             <div id="rightView"> <!--Right view of the page-->
                 <div id="book3Container">
-                    <img id="book3CoverImg" src="./Images/TheShining.jpg" alt="The Shining Img">
+                    <img id="book3CoverImg" src="./Images/TheShining.jpg" alt="The Shining Image">
                     <h2>The Shinning</h2>
                     <h5>Stephen King</h5>
                     <p>
@@ -87,10 +87,10 @@
                          guests going up and down in the elevator? And why do the hedges shaped like animals 
                          seem so alive?
                     </p>
-                    <a class="paymentBtn" id="paymentBtn3" href="./pay.html">Purchase</a>
+                    <a class="paymentBtn" id="paymentBtn3" href="./pay.html" title="purchase The Shining book"><strong>Purchase</strong></a>
                 </div>
                 <div id="book4Container">
-                    <img id="book4CoverImg" src="./Images/Dune cover.jpg" alt="Dune Img">
+                    <img id="book4CoverImg" src="./Images/DuneCover.jpg" alt="Dune Image">
                     <h2>Dune</h2>
                     <h5>by Frank Herbert</h5>
                     <p>
@@ -103,7 +103,7 @@
                         animal is laid completely bare and pertinent themes are explored, making Dune one
                         of the epic sci-fi novels of the twentieth century. 
                     </p>
-                    <a class="paymentBtn" id="paymentBtn4" href="./pay.html">Purchase</a>
+                    <a class="paymentBtn" id="paymentBtn4" href="./pay.html" title="purchase Dune book"><strong>Purchase</strong></a>
                 </div>
             </div>
         </div>
