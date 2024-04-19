@@ -133,9 +133,9 @@ window.onload = () =>{ // make sure the page is loaded before executing js to pr
                 return paymentForm.reset(); // resets the form after error message output
             } else{ // if no errors then continues to POST requests
                 let data ={ // creates a json of the data 
-                    "master_card": cardNumber,
-                    "exp_year": year,
-                    "exp_month": month,
+                    "master_card": parseInt(cardNumber),
+                    "exp_year": parseInt(year),
+                    "exp_month": parseInt(month),
                     "cvv_code": CVV
                 }
                 let jsonData = JSON.stringify(data); // puts data into a string
@@ -149,25 +149,30 @@ window.onload = () =>{ // make sure the page is loaded before executing js to pr
                 body: jsonData // uses the now stringified data as the body of the POST request
                 })
                 .then(response => { // responses back from the server 
-                    const statusCode = response.status; // gets the response code,  checks each response and gives an appropriate alert to the user 
-                    if (statusCode >= 100 && statusCode < 200) { //Informational response (1xx)
-                        alert('Server Msg: ' + statusCode);
-                    } else if (statusCode >= 200 && statusCode < 300) { // Success response (2xx)
+                    console.log(data);
+                    if (response.status >= 100 && response.status < 200) { //Informational response (1xx)
+                        console.log(response.status);
+                        alert('Server Msg: ' + response.status);
+                    } else if (response.status >= 200 && response.status < 300) { // Success response (2xx)
+                        console.log(response.status);
                         return response.json();
-                    } else if (statusCode >= 300 && statusCode < 400) { // Redirection response (3xx)
-                        alert('Server Msg: ' + statusCode);                     
+                    } else if (response.status >= 300 && response.status < 400) { // Redirection response (3xx)
+                        console.log(response.status);
+                        alert('Server Msg: ' + response.status);                     
                         return paymentForm.reset();
-                    } else if (statusCode >= 400 && statusCode < 500) { // Client error response (4xx)
-                        alert('Server Msg: ' + statusCode);                      
+                    } else if (response.status >= 400 && response.status < 500) { // Client error response (4xx)
+                        console.log(response.status);
+                        alert('Server Msg: ' + response.status);                      
                         return paymentForm.reset();
-                    } else if (statusCode >= 500 && statusCode < 600) { // Server error response (5xx)
-                        alert('Server Msg: ' + statusCode);
+                    } else if (response.status >= 500 && response.status < 600) { // Server error response (5xx)
+                        console.log(response.status);
+                        alert('Server Msg: ' + response.status);
                         return paymentForm.reset();
                     } else { //Unknown response category
-                        alert('Server Msg: ' + statusCode);
+                        console.log(response.status);
+                        alert('Server Msg: ' + response.status);
                         return paymentForm.reset();
                     }
-                    return response.json();
                 })
                 .then(data => {
                     if(data.message == 'Thank you for your payment'){ // also checks response if successful
