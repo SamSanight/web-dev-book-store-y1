@@ -153,12 +153,12 @@ window.onload = () =>{ // make sure the page is loaded before executing js to pr
                     if (statusCode >= 100 && statusCode < 200) { //Informational response (1xx)
                         alert('Server Msg: ' + statusCode);
                     } else if (statusCode >= 200 && statusCode < 300) { // Success response (2xx)
-                        window.location.href = "success.html"; // redirects to the success page
+                        return response.json();
                     } else if (statusCode >= 300 && statusCode < 400) { // Redirection response (3xx)
-                        alert('Server Msg: ' + statusCode);                       
+                        alert('Server Msg: ' + statusCode);                     
                         return paymentForm.reset();
                     } else if (statusCode >= 400 && statusCode < 500) { // Client error response (4xx)
-                        alert('Server Msg: ' + statusCode);                        
+                        alert('Server Msg: ' + statusCode);                      
                         return paymentForm.reset();
                     } else if (statusCode >= 500 && statusCode < 600) { // Server error response (5xx)
                         alert('Server Msg: ' + statusCode);
