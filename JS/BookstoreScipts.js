@@ -3,7 +3,7 @@ window.onload = () =>{ // make sure the page is loaded before executing js to pr
         document.body.style.fontSize = "16px";
         document.querySelectorAll('label').forEach(label => label.style.fontSize = '20px'); // changes the font size of labels which changes the buttons mainly
         if(window.location.href.includes("success.html")){ // if on the success page then 
-            document.getElementById("additionalText").style.fontSize = "10px";
+            document.getElementById("additionalText").style.fontSize = "24px";
         }
         if(window.location.href.includes("pay.html")){ // if on the pay page then
             document.getElementById("submit").style.padding = "1px";
@@ -14,7 +14,7 @@ window.onload = () =>{ // make sure the page is loaded before executing js to pr
         document.body.style.fontSize = "20px";
         document.querySelectorAll('label').forEach(label => label.style.fontSize = '22.5px');
         if(window.location.href.includes("success.html")){
-            document.getElementById("additionalText").style.fontSize = "16px";
+            document.getElementById("additionalText").style.fontSize = "26px";
         }
         if(window.location.href.includes("pay.html")){
             document.getElementById("submit").style.padding = "2.5px";
@@ -25,7 +25,7 @@ window.onload = () =>{ // make sure the page is loaded before executing js to pr
         document.body.style.fontSize = "25px";
         document.querySelectorAll('label').forEach(label => label.style.fontSize = '25px');
         if(window.location.href.includes("success.html")){
-            document.getElementById("additionalText").style.fontSize = "16px";
+            document.getElementById("additionalText").style.fontSize = "30px";
         }
         if(window.location.href.includes("pay.html")){
             document.getElementById("submit").style.padding = "5px";
@@ -130,7 +130,7 @@ window.onload = () =>{ // make sure the page is loaded before executing js to pr
                 errorMsg += "!"; 
                 errorMsg += "\nRe-fill in the form"; // new line message on the alert
                 alert(errorMsg); // outputs the errorMsg
-                return paymentForm.reset(); // resets the form after error message output
+                return location.reload(); // resets the form after error message output
             } else{ // if no errors then continues to POST requests
                 let data ={ // creates a json of the data 
                     "master_card": parseInt(cardNumber),
@@ -151,35 +151,36 @@ window.onload = () =>{ // make sure the page is loaded before executing js to pr
                 .then(response => { // responses back from the server 
                     console.log(data);
                     if (response.status >= 100 && response.status < 200) { //Informational response (1xx)
-                        console.log(response.status);
+                        //console.log(response.status);
                         alert('Server Msg: ' + response.status);
+                        location.reload();
                     } else if (response.status >= 200 && response.status < 300) { // Success response (2xx)
-                        console.log(response.status);
+                        //console.log(response.status);
                         return response.json();
                     } else if (response.status >= 300 && response.status < 400) { // Redirection response (3xx)
-                        console.log(response.status);
+                        //console.log(response.status);
                         alert('Server Msg: ' + response.status);                     
-                        return paymentForm.reset();
+                        return location.reload();
                     } else if (response.status >= 400 && response.status < 500) { // Client error response (4xx)
-                        console.log(response.status);
+                        //console.log(response.status);
                         alert('Server Msg: ' + response.status);                      
-                        return paymentForm.reset();
+                        return location.reload();
                     } else if (response.status >= 500 && response.status < 600) { // Server error response (5xx)
-                        console.log(response.status);
+                        //console.log(response.status);
                         alert('Server Msg: ' + response.status);
-                        return paymentForm.reset();
+                        return location.reload();
                     } else { //Unknown response category
-                        console.log(response.status);
+                        //console.log(response.status);
                         alert('Server Msg: ' + response.status);
-                        return paymentForm.reset();
+                        return location.reload();
                     }
                 })
                 .then(data => {
                     if(data.message == 'Thank you for your payment'){ // also checks response if successful
                         window.location.href = "success.html"; // redirects to the success page
                     } else{
-                        let errorMsg = "Error server side, please Re-fill in the form"
-                        return paymentForm.reset();
+                        alert("Error server side, please Re-fill in the form");
+                        return location.reload();
                     }
                 console.log('Success:', data);
                 })

@@ -197,8 +197,13 @@ header{
         left: 80%;
         top: 12.5%;
     }
+    #textSizeChange,
+    #accessabilityColour{
+        font-size: 16px;
+    }
     #accessabilitySelectContainer{
-        width: 13vw;
+        width: 15vw;
+        min-width: 290px;
     }
 }
 
@@ -384,7 +389,7 @@ header{
     }
     #accessabilitySelectContainer{
         left: 5%;
-        top: 82.5%;
+        top: 82%;
     }
     #textSizeChange,
     #accessabilityColour{
@@ -392,7 +397,7 @@ header{
     }
     #accessabilitySelectContainer{
         width: 30%; 
-
+        min-width: 290px;
     }
 
 }
